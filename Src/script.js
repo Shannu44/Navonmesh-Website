@@ -7,7 +7,7 @@ window.addEventListener('scroll', () => {
   // Get the current scroll position
   const scrollPosition = window.scrollY;
 
-  hero.querySelector('h1').style.transform = `translateY(-${scrollPosition / 8}px)`;
+  hero.querySelector('h1').style.transform = `translateY(-${scrollPosition / 6}px)`;
   
   // Move the skyscrapers left and right
   skyscraper.style.transform = `translate(${scrollPosition / 1}px, 0)`;

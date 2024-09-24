@@ -12,40 +12,39 @@ nav
 }
 .nav
 {
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
 }
 
 .nav .logo
 {
-    z-index: 1;
-    margin-left: 10px;
-    color:white;
+  z-index: 1;
+  margin-left: 10px;
+  color:white;
 }
 .navbar 
 {
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
-    font-family: sans-serif;
-    margin-left:-10px;
-    padding: 10px 25px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  font-family: sans-serif;
+  margin-left:-10px;
+  padding: 10px 25px;
 }
 nav ul 
 {
-    display: flex;
-    justify-content:right;
-    align-items: right;
-    gap: 1.25rem;
-    list-style: none;
+  display: flex;
+  justify-content:right;
+  align-items: right;
+  gap: 1 rem;
+  list-style: none;
 }
-
 .link 
 {
     text-decoration: none;
     padding: 0.5rem 0.75rem;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: #fefefe;
     position: relative;
@@ -53,7 +52,7 @@ nav ul
 }
 .link:hover 
 {
-  color: rgb(0, 136, 255);
+  color: rgb(255, 106, 238);
 }
 
 .link::after 
@@ -89,11 +88,11 @@ nav ul
   display: flex;
   text-align: center;
   justify-content: center;
-  margin-top:60 0px;
+  margin-top:620px;
   z-index: 2;
   font-size: 8em;
   font-family: sans-serif;
-  animation: fadeIn 3s ease-in-out;
+  animation: fadeIn 4s ease-in-out;
   background: linear-gradient(140deg, #ffffff, #ff4dcc);
   -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent;
@@ -121,7 +120,7 @@ nav ul
     margin-top:100px;
     width: 850px;
     height: 1100px;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.75s ease-in-out;
   }
   
   .skyscraper2 
@@ -133,7 +132,7 @@ nav ul
     margin-top:100px;
     width: 850px;
     height: 1100px;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.75s ease-in-out;
 }
 .cultural
 {
