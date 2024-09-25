@@ -1,0 +1,348 @@
+* 
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+nav 
+{
+  width: 100%;
+  max-width: fit-content;
+  padding: 24px 40px;
+}
+.nav
+{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  overflow-y: hidden;
+
+}
+
+.nav .logo
+{
+  z-index: 1;
+  margin-left: 10px;
+  color:white;
+}
+.navbar 
+{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  font-family: sans-serif;
+  margin-left:-10px;
+  padding: 10px 25px;
+}
+nav ul 
+{
+  display: flex;
+  justify-content:right;
+  align-items: right;
+  gap: 1 rem;
+  list-style: none;
+}
+.link 
+{
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fefefe;
+    position: relative;
+    transition: color 0.25s;
+}
+.link:hover 
+{
+  color: rgb(255, 106, 238);
+}
+
+.link::after 
+{
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: #fefefe;
+  scale: 1 0;
+  z-index: -1;
+  transition: 0.45s;
+  border-radius: 10px;
+}
+.link:hover::after 
+{
+  scale: 1 1;
+}
+.background-container 
+{
+  top:0;
+  margin-top:-10px;
+  width:100%;
+  height: 1010px;
+  background-image: url('Pics/OIG4.jpeg');
+  background-size:cover;
+  background-position: center;
+  overflow:hidden;
+}
+.hero h1 
+{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top:400px;
+  z-index: 2;
+  font-size: 8em;
+  font-family: sans-serif;
+  animation: fadeIn 3s ease-in-out;
+  color: white;
+  /* background: linear-gradient(140deg, #ffffff, #ff4dcc);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; */
+}
+.hero h1 
+{
+    transition: transform 0.5s ease-in-out;
+}
+@keyframes fadeIn 
+{
+  0% 
+  {
+      opacity: 0;
+  }
+  100% 
+  {
+      opacity: 2;
+  }
+}
+.skyscraper 
+{
+    position: absolute; /* Use absolute positioning */
+    top: 0vh; /* Set the top position to 50% of the viewport height */
+    left: 40vw; /* Set the left position to 50% of the viewport width */
+    transform: translate(0, 0);
+    margin-top:200px;
+    width: 800px;
+    height: 800px;
+    transition: transform 1s ease-in-out; 
+    overflow-y:hidden;
+}
+  
+  .skyscraper2 
+{
+    position: absolute; /* Use absolute positioning */
+    top: 0vh; /* Set the top position to 50% of the viewport height */
+    left: 0vw; /* Set the left position to 50% of the viewport width */
+    transform: translate(0, 0);
+    margin-top:200px;
+    width: 800px;
+    height: 800px;
+    transition: transform 1s ease-in-out;
+    overflow-y:hidden;
+}
+body, html 
+{
+  overflow-x: hidden;
+}
+/* Add the following code to card.css */
+.page
+{
+  background:url(Pics/Moon\ with\ Scraper.png)no-repeat;
+  height:100%;
+  background-size:cover;
+  background-position: center;
+}
+.page h1
+{
+  display: flex;
+  text-align:center;
+  justify-content: center;
+  color:#fefefe;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.ccontainer 
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin-left:250px;
+  margin-top:100px;
+}
+.ccontainer2
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 680px;
+  margin-left:400px;
+  margin-top:80px;
+}
+.card 
+{
+  background: rgba(255, 255, 255, 0.164);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  height:max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+  border: 1px solid black;
+  border: transparent;
+  backdrop-filter:blur(0.7px);
+}
+
+.card:hover 
+{
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.366);
+}
+
+.card .photo 
+{
+  width: 100%;
+  height: 190px;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .photo 
+{
+  transform: scale(1.1);
+}
+
+.card .content 
+{
+  padding: 20px;
+  text-align: center;
+}
+
+/* .card .content h2 
+{
+  color:rgb(178, 152, 254);
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top:20px;
+} */
+
+.card .content p 
+{
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.card .content a 
+{
+  text-decoration: none;
+  color: rgb(64, 64, 202);
+  transition: color 0.3s ease-in-out;
+}
+
+.card .content a:hover 
+{
+  color: #23527c;
+}
+.card::before 
+{
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 254, 254, 0.2);
+  filter: blur(10px);
+  z-index: -1;
+}
+.page1
+{
+  background:url(Pics/Brown\ &\ Black\ Bg.jpg)no-repeat;
+  height:1250px;
+  margin: top -50%;
+  background-size:cover;
+  background-position: center;
+}
+
+
+
+
+
+
+
+
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+  /* Adjust the hero section for mobile */
+  .hero h1 {
+    font-size: 3em; /* Make the font smaller */
+    margin-top: 200px; /* Adjust the margin */
+  }
+
+  /* Adjust the skyscrapers for mobile */
+  .skyscraper, .skyscraper2 {
+    max-width: auto; /* Make the skyscrapers fill the screen */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 100px; /* Adjust the top margin */
+  }
+
+  /* Adjust navigation layout for mobile */
+  .nav {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+
+  .navbar {
+    margin-left: 0;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack links vertically */
+    gap: 1rem;
+  }
+
+  .link {
+    font-size: 16px; /* Reduce font size */
+    padding: 0.5rem; /* Adjust padding */
+  }
+
+  /* Adjust the card container */
+  .ccontainer, .ccontainer2 {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center-align them */
+    margin-left: 0;
+    max-width: 100%; /* Full width */
+  }
+
+  .card {
+    width: 90%; /* Make cards fit screen */
+  }
+
+  /* Adjust the background image for mobile */
+  .background-container {
+    background-position: center;
+    background-size: cover; /* Ensure the background image fits nicely */
+    height: auto; /* Allow background height to adjust */
+  }
+
+  /* Adjust the page section for mobile */
+  .page {
+    background-size: cover;
+    height: auto; /* Adjust height for mobile */
+  }
+  
+  .page1 {
+    height: auto;
+    margin: top -50%;
+  }
+}
