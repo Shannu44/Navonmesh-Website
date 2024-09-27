@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commerce Events - Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .event {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .event h2 {
+            margin-top: 0;
+        }
+
+        .event p {
+            line-height: 1.6;
+        }
+
+        .register-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .register-btn:hover {
+            background-color: #45a049;
+        }
+
+        .form-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label, input {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #007bb5;
+        }
+    </style>
+    <script>
+        function showForm(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1>Commerce Fest Competitions</h1>
+
+    <!-- Jnana Kaushala (Commerce Quiz) -->
+    <div class="event">
+        <h2>Jnana Kaushala (Commerce Quiz)</h2>
+        <p>1. Each team must consist of exactly 2 members.<br>
+           2. Only one team per college.<br>
+           3. Team members cannot be substituted once the competition has started.<br>
+           4. Teams must register by 5th November 2024. Late registration will not be accepted under any circumstances.<br>
+           5. The quiz will consist of 3 rounds which include E-Vanijya Shastra Spardha (Preliminary round), Drishya Samvaada (Semi-final round), and Commerce Crorepati (Final round).<br>
+           6. Each round will have a set of questions which can be in the form of a single word answer, multiple choice, true/false, or audio-visual questions.<br>
+           7. Participants must bring their phone.<br>
+           8. Tiebreaker rounds will be conducted if needed.<br>
+           9. Audiences are not allowed to assist or provide answers to any team.<br>
+           10. Any form of cheating or misconduct will lead to immediate disqualification.<br>
+           11. The quiz master's decision will be final and binding.</p>
+        <button class="register-btn" onclick="showForm('quizForm')">Register</button>
+
+        <div id="quizForm" class="form-container">
+            <form method="POST" action="/register_jnana_kaushala">
+                <label>Participant 1 Name:</label><input type="text" name="participant1_name" required>
+                <label>Participant 1 Phone:</label><input type="text" name="participant1_phone" required>
+                <label>Participant 1 Branch:</label><input type="text" name="participant1_branch" required>
+
+                <label>Participant 2 Name:</label><input type="text" name="participant2_name" required>
+                <label>Participant 2 Phone:</label><input type="text" name="participant2_phone" required>
+                <label>Participant 2 Branch:</label><input type="text" name="participant2_branch" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Kala Kaushala (Business Rangoli) -->
+    <div class="event">
+        <h2>Kala Kaushala (Business Rangoli)</h2>
+        <p>1. The rangoli's size is limited to 4ft x 4ft.<br>
+           2. Participants are required to use only rangoli colors and bring their own materials.<br>
+           3. There is a time limit of 1 hour + 15 minutes for completing the rangoli.<br>
+           4. The group can consist of exactly 4 members.<br>
+           5. Judgment is based on creativity, relevance to the theme, clarity, color combination, and overall appearance.</p>
+        <button class="register-btn" onclick="showForm('rangoliForm')">Register</button>
+
+        <div id="rangoliForm" class="form-container">
+            <form method="POST" action="/register_kala_kaushala">
+                <label>Participant 1 Name:</label><input type="text" name="participant1_name" required>
+                <label>Participant 1 Phone:</label><input type="text" name="participant1_phone" required>
+                <label>Participant 1 Branch:</label><input type="text" name="participant1_branch" required>
+
+                <label>Participant 2 Name:</label><input type="text" name="participant2_name" required>
+                <label>Participant 2 Phone:</label><input type="text" name="participant2_phone" required>
+                <label>Participant 2 Branch:</label><input type="text" name="participant2_branch" required>
+
+                <label>Participant 3 Name:</label><input type="text" name="participant3_name" required>
+                <label>Participant 3 Phone:</label><input type="text" name="participant3_phone" required>
+                <label>Participant 3 Branch:</label><input type="text" name="participant3_branch" required>
+
+                <label>Participant 4 Name:</label><input type="text" name="participant4_name" required>
+                <label>Participant 4 Phone:</label><input type="text" name="participant4_phone" required>
+                <label>Participant 4 Branch:</label><input type="text" name="participant4_branch" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Tantra Kaushala (Mad Ad) -->
+    <div class="event">
+        <h2>Tantra Kaushala (Mad Ad)</h2>
+        <p>1. Each team can consist of 3-6 members. Teams must register in advance.<br>
+           2. Each team will get 6 minutes to perform their ad; an additional 1 minute can be allotted for setup if required. Exceeding the time limit will lead to point deductions.<br>
+           3. The performance must be original and creative.<br>
+           4. Humor and wit are encouraged, but no offensive language or inappropriate content is allowed.<br>
+           5. Use of props and costumes is allowed but should be minimal and easily manageable.<br>
+           6. The ad can be performed in English or Kannada.<br>
+           7. Judgment will be based on Creativity and Originality, Humor and Entertainment Value, Clarity and Message, Teamwork and Coordination, and Adherence to Time.<br>
+           8. The use of hazardous materials or objects that could damage the venue is strictly prohibited.</p>
+        <button class="register-btn" onclick="showForm('madAdForm')">Register</button>
+
+        <div id="madAdForm" class="form-container">
+            <form method="POST" action="/register_tantra_kaushala">
+                <label>Participant 1 Name:</label><input type="text" name="participant1_name" required>
+                <label>Participant 1 Phone:</label><input type="text" name="participant1_phone" required>
+                <label>Participant 1 Branch:</label><input type="text" name="participant1_branch" required>
+
+                <label>Participant 2 Name:</label><input type="text" name="participant2_name" required>
+                <label>Participant 2 Phone:</label><input type="text" name="participant2_phone" required>
+                <label>Participant 2 Branch:</label><input type="text" name="participant2_branch" required>
+
+                <label>Participant 3 Name:</label><input type="text" name="participant3_name" required>
+                <label>Participant 3 Phone:</label><input type="text" name="participant3_phone" required>
+                <label>Participant 3 Branch:</label><input type="text" name="participant3_branch" required>
+
+                <label>Participant 4 Name:</label><input type="text" name="participant4_name">
+                <label>Participant 4 Phone:</label><input type="text" name="participant4_phone">
+                <label>Participant 4 Branch:</label><input type="text" name="participant4_branch">
+
+                <label>Participant 5 Name:</label><input type="text" name="participant5_name">
+                <label>Participant 5 Phone:</label><input type="text" name="participant5_phone">
+                <label>Participant 5 Branch:</label><input type="text" name="participant5_branch">
+
+                <label>Participant 6 Name:</label><input type="text" name="participant6_name">
+                <label>Participant 6 Phone:</label><input type="text" name="participant6_phone">
+                <label>Participant 6 Branch:</label><input type="text" name="participant6_branch">
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Anveshana (Treasure Hunt) -->
+    <div class="event">
+        <h2>Anveshana (Treasure Hunt)</h2>
+        <p>1. Each team must consist of 4 members: 2 from commerce and 2 from Science.<br>
+           2. Participants must have participated in any one of the other events of NAVONMESH.<br>
+           3. Clues must be solved in sequence to progress.<br>
+           4. The hunt area is restricted to designated zones only.<br>
+           5. Any damage to property or environment is prohibited.<br>
+           6. The game is time-bound; all teams must return by the set deadline.<br>
+           7. No use of electronic devices.<br>
+           8. Tiebreaker rounds will be conducted if needed.<br>
+           9. Audiences are not allowed to assist or provide answers to any team.<br>
+           10. Any form of cheating or misconduct will lead to immediate disqualification.</p>
+        <button class="register-btn" onclick="showForm('treasureHuntForm')">Register</button>
+
+        <div id="treasureHuntForm" class="form-container">
+            <form method="POST" action="/register_anveshana">
+                <label>Participant 1 Name:</label><input type="text" name="participant1_name" required>
+                <label>Participant 1 Phone:</label><input type="text" name="participant1_phone" required>
+                <label>Participant 1 Branch:</label><input type="text" name="participant1_branch" required>
+
+                <label>Participant 2 Name:</label><input type="text" name="participant2_name" required>
+                <label>Participant 2 Phone:</label><input type="text" name="participant2_phone" required>
+                <label>Participant 2 Branch:</label><input type="text" name="participant2_branch" required>
+
+                <label>Participant 3 Name:</label><input type="text" name="participant3_name" required>
+                <label>Participant 3 Phone:</label><input type="text" name="participant3_phone" required>
+                <label>Participant 3 Branch:</label><input type="text" name="participant3_branch" required>
+
+                <label>Participant 4 Name:</label><input type="text" name="participant4_name" required>
+                <label>Participant 4 Phone:</label><input type="text" name="participant4_phone" required>
+                <label>Participant 4 Branch:</label><input type="text" name="participant4_branch" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

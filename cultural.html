@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Events - Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .event {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        .event h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .event p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .register-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .register-btn:hover {
+            background-color: #45a049;
+        }
+
+        .form-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label, input {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="number"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type="submit"] {
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #007bb5;
+        }
+    </style>
+    <script>
+        /*function showForm(id) {
+            document.getElementById(id).style.display = 'block';
+        }*/
+        
+          function showForm(id) {
+            const form = document.getElementById(id);
+            // Toggle the display of the form
+            if (form.style.display === 'block') {
+                form.style.display = 'none';
+            } else {
+                // Hide all other forms
+                const forms = document.querySelectorAll('.form-container');
+                forms.forEach(f => f.style.display = 'none');
+                // Show the selected registration form
+                form.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Cultural Fest Competitions</h1>
+<!-- Vividha Vaibhava (Variety Show) -->
+<div class="event">
+    <h2>Vividha Vaibhava (Variety Show)</h2>
+    <p>1. Theme: Kannada Nadu Vaibhav.<br>
+       2. Only one team allowed from each college.<br>
+       3. 15 minutes performance + 5 minutes for stage setup.<br>
+       4. Costumes and makeup not provided by organizers.<br>
+       5. Uniqueness and variety in performance are important (dance, skit, mime, yakshagana, song, etc.).<br>
+       6. Exceeding time limits results in point deduction.<br>
+       7. Best MC will be awarded.<br>
+       8. More participants and performances will be considered in judgment.<br>
+       9. Judge’s decision is final.</p>
+    <button class="register-btn" onclick="showForm('varietyShowForm')">Register</button>
+
+    <div id="varietyShowForm" class="form-container">
+        <form method="POST" action="/register_vividha_vaibhava">
+            <label>Team Name:</label><input type="text" name="team_name" required>
+            <label>Team Leader Name:</label><input type="text" name="team_leader_name" required>
+            <label>Team Leader Phone:</label><input type="text" name="team_leader_phone" required>
+            <label>Number of Participants:</label><input type="number" name="team_count" min="1" max="10" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+    <!-- Natana Vaibhava (Mono Act) -->
+    <div class="event">
+        <h2>Natana Vaibhava (Mono Act)</h2>
+        <p>1. Solo performance: one performer per college.<br>
+           2. Time limit: 10 minutes.<br>
+           3. Language: Kannada.<br>
+           4. No harmful or illegal content.<br>
+           5. Judgment based on creativity, storytelling, expressions, body language, overall impact.<br>
+           6. Judge’s decision is final.</p>
+        <button class="register-btn" onclick="showForm('monoActForm')">Register</button>
+
+        <div id="monoActForm" class="form-container">
+            <form method="POST" action="/register_natana_vaibhava">
+                <label>Participant Name:</label><input type="text" name="participant_name" required>
+                <label>Participant Phone:</label><input type="text" name="participant_phone" required>
+                <label>Participant Branch:</label><input type="text" name="participant_branch" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Natya Vaibhava (Bharatanatyam) -->
+    <div class="event">
+        <h2>Natya Vaibhava (Bharatanatyam)</h2>
+        <p>1. Solo performer per college.<br>
+           2. Time limit: 10 minutes.<br>
+           3. Judgment based on Thala, technique, rhythm, Abhinaya, costumes, footwork, overall impression.</p>
+        <button class="register-btn" onclick="showForm('bharatanatyamForm')">Register</button>
+
+        <div id="bharatanatyamForm" class="form-container">
+            <form method="POST" action="/register_natya_vaibhava">
+                <label>Participant Name:</label><input type="text" name="participant_name" required>
+                <label>Participant Phone:</label><input type="text" name="participant_phone" required>
+                <label>Participant Branch:</label><input type="text" name="participant_branch" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Gana Vaibhava (Janapada Geetha) -->
+    <div class="event">
+        <h2>Gana Vaibhava (Janapada Geetha)</h2>
+        <p>1. One team per college with 4-6 members.<br>
+           2. Instruments allowed; karaoke not allowed.<br>
+           3. Duration: 4+1 minutes.<br>
+           4. Filmy-style folk songs not allowed.</p>
+        <button class="register-btn" onclick="showForm('ganaVaibhavaForm')">Register</button>
+
+        <div id="ganaVaibhavaForm" class="form-container">
+            <form method="POST" action="/register_gana_vaibhava">
+                <label>Participant 1 Name:</label><input type="text" name="participant1_name" required>
+                <label>Participant 1 Phone:</label><input type="text" name="participant1_phone" required>
+                <label>Participant 1 Branch:</label><input type="text" name="participant1_branch" required>
+
+                <label>Participant 2 Name:</label><input type="text" name="participant2_name" required>
+                <label>Participant 2 Phone:</label><input type="text" name="participant2_phone" required>
+                <label>Participant 2 Branch:</label><input type="text" name="participant2_branch" required>
+
+                <label>Participant 3 Name:</label><input type="text" name="participant3_name" required>
+                <label>Participant 3 Phone:</label><input type="text" name="participant3_phone" required>
+                <label>Participant 3 Branch:</label><input type="text" name="participant3_branch" required>
+
+                <label>Participant 4 Name:</label><input type="text" name="participant4_name" required>
+                <label>Participant 4 Phone:</label><input type="text" name="participant4_phone" required>
+                <label>Participant 4 Branch:</label><input type="text" name="participant4_branch" required>
+
+                <label>Participant 5 Name:</label><input type="text" name="participant5_name">
+                <label>Participant 5 Phone:</label><input type="text" name="participant5_phone">
+                <label>Participant 5 Branch:</label><input type="text" name="participant5_branch">
+
+                <label>Participant 6 Name:</label><input type="text" name="participant6_name">
+                <label>Participant 6 Phone:</label><input type="text" name="participant6_phone">
+                <label>Participant 6 Branch:</label><input type="text" name="participant6_branch">
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Vadana Vaibhava (Face Painting) -->
+    <div class="event">
+        <h2>Vadana Vaibhava (Face Painting)</h2>
+        <p>1. One team per college with 2 participants.<br>
+           2. Duration: 60 minutes.<br>
+           3. Theme: Team choice.<br>
+           4. Judgment based on creativity, innovation, color, neatness.</p>
+        <button class="register-btn" onclick="showForm('facePaintingForm')">Register</button>
+
+        <div id="facePaintingForm" class="form-container">
+            <form method="POST" action="/register_vadana_vaibhava">
+                <label>Participant 1 Name:</label><input type="text" name="participant1_name" required>
+                <label>Participant 1 Phone:</label><input type="text" name="participant1_phone" required>
+                <label>Participant 1 Branch:</label><input type="text" name="participant1_branch" required>
+
+                <label>Participant 2 Name:</label><input type="text" name="participant2_name" required>
+                <label>Participant 2 Phone:</label><input type="text" name="participant2_phone" required>
+                <label>Participant 2 Branch:</label><input type="text" name="participant2_branch" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
