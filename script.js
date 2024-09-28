@@ -13,12 +13,12 @@ window.addEventListener('scroll', () => {
       const scrollLimit = 18; // Adjusted to vh/vw proportions
 
       // Move hero's h1 element upwards smoothly
-      hero.querySelector('h1').style.transform = `translateY(-${scrollPosition /20}vh)`;
+      hero.querySelector('h1').style.transform = `translateY(-${scrollPosition /30}vh)`;
 
       // Move skyscrapers left and right
       if (scrollPosition < scrollLimit) {
-        skyscraper.style.transform = `translateX(${scrollPosition * 1.5}vw)`;
-        skyscraper2.style.transform = `translateX(-${scrollPosition * 1.5}vw)`;
+        skyscraper.style.transform = `translateX(${scrollPosition * 2}vw)`;
+        skyscraper2.style.transform = `translateX(-${scrollPosition * 2}vw)`;
       }
 
       ticking = false;

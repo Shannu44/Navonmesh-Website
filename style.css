@@ -131,7 +131,6 @@ nav li:first-child{
     opacity: 1;
   }
 }
-
 .skyscraper, .skyscraper2 {
   position: absolute;
   top: 0;
@@ -693,12 +692,13 @@ color: white;
   padding-right: 10px;
 }
 
-.front h1{
+.front h1
+{
   font-size: 14px;
   z-index: 2;
+  padding:0px;
   padding-top:5px;
 }
-
 .front p {
   padding: 10px 10px;
   padding-bottom: 5px;
