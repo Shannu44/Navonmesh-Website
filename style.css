@@ -9,7 +9,7 @@
 }
 body
 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(Pics/Robot\ ai.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Pics/Robot\ ai.png);
   background-repeat: no-repeat;
   background-position: center;
   height:100%;
