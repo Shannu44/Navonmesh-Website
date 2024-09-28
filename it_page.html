@@ -5,21 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT Events - Registration</title>
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background: url(Pics/Robot\ ai.png); 
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
-    min-height: 100vh;
-    background-attachment: fixed;
-    background-size: cover;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*
+{
+  font-family: "Poppins",sans-serif;
+}
+body 
+{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(Pics/Robot\ ai.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height:100%;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
 }
 body, html 
 {
   overflow-x: hidden;
+}
+.logo
+{
+  height:80px;
+  width:120px;
+  margin-top:5px;
 }
 nav ul
 {
@@ -34,7 +43,7 @@ nav li{
 }
 nav a
 {
-  padding: 5px 25px;
+  padding: 15px 25px;
   margin-right:5px;
   text-decoration: none;
   display: flex;
@@ -103,11 +112,25 @@ nav li:first-child{
 }
 h1 
 {
+    animation:zoom-in 1.7s ease ;
     text-align: center;
-    color: rgb(3, 5, 81);
     font-size: 50px;
-    margin-top: 80px;
-    font-weight: 700;
+    font-weight: 750;
+    font-size: 3rem;                   
+    color: rgb(163, 3, 163);
+    -webkit-text-stroke: 2px rgb(255, 255, 255); 
+}
+@keyframes zoom-in 
+{
+  0% {
+    transform: scale(1.5, 1.5);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 .event1, .event2, .event3, .event4 
 {
@@ -116,11 +139,11 @@ h1
     flex-direction: column;
     border: 1px solid #f3eeee;
     backdrop-filter: blur(5px);
-    background: rgba(0, 0, 0, 0.312);
+    background: rgba(1, 12, 76, 0.689);
     border-radius: 10px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
     width: 500px;
-    height: 270px; /* Default height */
+    height: max-content; /* Default height */
     transition: height 0.7s ease; /* Smooth transition */
     padding: 40px;
 }
@@ -130,7 +153,7 @@ h1
 .event1 h2, .event2 h2, .event3 h2, .event4 h2 {
     text-align: center;
     margin-top: 10px;
-    color: rgb(249, 88, 235);
+    color: rgb(255, 45, 237);
 }
 .event1 p, .event2 p, .event3 p, .event4 p {
     padding: 25px;
@@ -179,7 +202,6 @@ label, input
     width: 250px;
     color: rgb(255, 255, 255);
     font-size: 15px;
-    font-weight: bolder;
     background: transparent;
     height:12px;
 }
@@ -219,7 +241,93 @@ button[type="submit"]:hover
     margin-right:30px; /* Spacing between the close button and the submit button */
     align-self: flex-end; /* Spacing between the close button and the submit button */ /* Aligns the button to the start of the form */
 }
-@media only screen and (max-width: 600px) {
+footer
+{
+  bottom: 0;
+  width:100vw;
+  margin-top: auto;
+  background-color: black;
+  height:60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer h2
+{
+  font-family: sans-serif;
+  font-size:15px;
+  color:grey;
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  padding-left: 20px;
+}
+.soicons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center ;
+  padding-right: 55px;
+ }
+
+.soicons .button {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  transition: 0.1s;
+}
+.soicons .button svg {
+  color: white;
+  width: 30px;
+  height: 30px;
+  z-index: 9;
+}
+
+.soicons .button:nth-child(2) {
+  background: linear-gradient(120deg, #02ff2c, #008a12);
+}
+
+.soicons .button:nth-child(1) {
+  background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+}
+
+.soicons .button:nth-child(3) {
+  background: rgb(255, 33, 33);
+}
+
+.soicons .button:nth-child(6) {
+  background: black;
+}
+
+.soicons .button:active {
+  transform: scale(0.85);
+}
+
+.soicons .button::before {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background-color: #212121;
+  border-radius: 50px;
+  z-index: -1;
+  border: 0px solid rgba(255, 255, 255, 0.411);
+  transition: 0.4s;
+}
+.soicons .button:hover::before {
+  width: 0px;
+  height: 0px;
+}
+@media only screen and (max-width:600px) 
+{
 body {
 padding: 10px; /* Reduce padding for mobile */
 }
@@ -275,7 +383,7 @@ right: 10px; /* Position close button at the top right */
 top: 10px; /* Adjust vertical position */
 }
 }
-    </style>
+  </style>
     <script>
         function showForm(id, eventClass) {
             const formContainer = document.getElementById(id);
@@ -308,6 +416,11 @@ top: 10px; /* Adjust vertical position */
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'none'
         }
+        function showMessageBox() 
+        {
+            alert("Form is being submitted!");
+            return true; 
+        }
     </script>
 </head>
 <body>
@@ -315,26 +428,28 @@ top: 10px; /* Adjust vertical position */
         <ul class="sidebar">
           <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
           <li><a href="index.html">Home</a></li>
-          <li><a href="#">Commerce Events</a></li>
-          <li><a href="#">Cultural Events</a></li>
-          <li><a href="#">IT Events</a></li>
+          <li><a href="commerce.html">Commerce Events</a></li>
+          <li><a href="cultural.html">Cultural Events</a></li>
+          <li><a href="it_page.html">IT Events</a></li>
           <li><a href="#">Login</a></li>
         </ul>
         <ul>
-          <li><a href="#">LOGO</a></li>
-          <li class="hideOnMobile"><a href="#">Home</a></li>
-          <li class="hideOnMobile"><a href="#">Commerce Events</a></li>
-          <li class="hideOnMobile"><a href="#">Cultural Events</a></li>
-          <li class="hideOnMobile"><a href="#">IT Events</a></li>
+          <li><img src="Pics/Logo_.png" class="logo"></li>
+          <li class="hideOnMobile"><a href="index.html">Home</a></li>
+          <li class="hideOnMobile"><a href="commerce.html">Commerce Events</a></li>
+          <li class="hideOnMobile"><a href="cultural.html">Cultural Events</a></li>
+          <li class="hideOnMobile"><a href="it_page.html">IT Events</a></li>
           <li class="hideOnMobile"><a href="#">Login</a></li>
           <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 96 960 960" width="40" fill="white"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
         </ul>
       </nav>
-    <h1>IT Events - Registration</h1>
+      <div class="eventname">
+    <h1 class="ZoomIn">IT Events - Registration</h1>
+    </div>
     <div class="container">
-        <!-- Start Quest (Quiz) -->
+        <!-- Star Quest (Quiz) -->
         <div class="event1">
-            <h2>Start Quest (QUIZ)</h2>
+            <h2>Star Quest (QUIZ)</h2>
             <p>1. Two members make a team.<br>
             2. There will be multiple rounds, including sub-rounds.<br>
             3. Questions will focus on IT-related topics.<br>
@@ -349,7 +464,7 @@ top: 10px; /* Adjust vertical position */
                     <label>Participant 2 Phone:</label><input type="text" name="participant2_phone" required>
                     <label>Participant 2 Branch:</label><input type="text" name="participant2_branch" required>
                     <button class="close-btn" onclick="hideForm('quizForm', 'event1')">X</button>
-                    <button type="submit">Submit</button>
+                    <button type="submit" onsubmit="return showMessageBox()">Submit</button> 
                 </form>
             </div>
         </div>
@@ -397,7 +512,7 @@ top: 10px; /* Adjust vertical position */
         </div>
         <!-- Orion's Eye (Videography) -->
         <div class="event4">
-            <h2>Orion’s Eye (Videography)</h2>
+            <h2>Orion's Eye (Videography)</h2>
             <p>1. Individual event.<br>
                 2. Participants are allowed to use any equipment.<br>
                 3. No damaging of college property.<br>
@@ -416,5 +531,67 @@ top: 10px; /* Adjust vertical position */
             </div>
         </div>
     </div>
+<footer>
+<h2>@ All Rights Reserved</h2>
+<div class="soicons">
+<button onclick="window.location.href='https:/www.instagram.com/imjkundapura/?utm_source=ig_web_button_share_sheet';" class="button">
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    height="24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    class="w-6 h-6 text-gray-800 dark:text-white"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+      fill-rule="evenodd"
+      fill="currentColor"
+    ></path>
+  </svg>
+</button>
+<button onclick="window.location.href='https:/wa.me/9380773435';" class="button">
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    height="24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    class="w-6 h-6 text-gray-800 dark:text-white"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z"
+      fill-rule="evenodd"
+      fill="currentColor"
+    ></path>
+    <path
+      d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z"
+      fill="currentColor"
+    ></path>
+  </svg>
+</button>
+<button onclick="window.location.href='https:/www.youtube.com/@IMJISC';" class="button" >
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    height="24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    class="w-6 h-6 text-gray-800 dark:text-white"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z"
+      fill-rule="evenodd"
+    ></path>
+  </svg>
+</button>
+</div>
+</footer>
 </body>
 </html>
