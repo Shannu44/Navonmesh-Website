@@ -9,14 +9,14 @@
 }
 body
 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Pics/Robot\ ai.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Pics/Male\ Futuristic\ Ai\ Robo.png);
   background-repeat: no-repeat;
   background-position: center;
   height:100%;
   min-height: 100vh;
   background-attachment: fixed;
   background-size: cover;
-
+  overflow: auto;
 }
 .logo
 {
