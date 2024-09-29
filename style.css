@@ -60,15 +60,14 @@ nav li:first-child{
   top: 0; 
   right: 0;
   height:max-content;
-  width: 150px;
+  width: 200px;
+  padding: 10px;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   list-style: none;
   display: none;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
   z-index: 999;
 }
 .sidebar li{
@@ -76,7 +75,7 @@ nav li:first-child{
 }
 .sidebar a{
   width: 100%;
-padding-left: 10px;
+  padding-left: 0px;
 }
 .menu-button{
   display: none;
@@ -166,7 +165,7 @@ padding-left: 10px;
 }
 .clginf h2
 {
-  color: #04045f;
+  color: #ffffff;
   padding:90px;
   text-align: center;
   font-size: 35px;
@@ -263,8 +262,6 @@ body, html
   color:#ffffff;
   font-size:60px;
 }
-
-
 
 
 
@@ -782,7 +779,71 @@ color: white;
   .sidebar {
     width: 50vw;
   }
+footer
+{
+  bottom: 0;
+  width:100%;
+  margin-top: auto;
+  background-color: black;
+  height:60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+footer h2
+{
+  font-family: sans-serif;
+  font-size:6px;
+  color:grey;
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  padding-left: 10px;
+}
+.soicons{
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 5px;
+}
+
+.soicons .button 
+{
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.1s;
+}
+.soicons .button svg {
+  color: white;
+  width: 30px;
+  height: 30px;
+  z-index: 9;
+}
+.soicons .button::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #212121;
+  border-radius: 50px;
+  z-index: -1;
+  border: 0px solid rgba(255, 255, 255, 0.411);
+  transition: 0.4s;
+}
+.soicons .button:hover::before {
+  width: 0px;
+  height: 0px;
+}
+}
+
 
 
 
