@@ -27,6 +27,7 @@ body
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  bottom:0;
 }
 body, html 
 {
@@ -413,15 +414,14 @@ margin-left: 0; /* Remove left margin */
 .close-btn {
 font-size: 24px; /* Adjust size for mobile */
 margin-right: 0; /* Align close button properly */
-position: absolute; /* Change position for better usability */
 right: 10px; /* Position close button at the top right */
-top: 10px; /* Adjust vertical position */
+margin-top: 100%;
 }
 h1 
 {
     animation:zoom-in 1.7s ease ;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 750;
     font-size: 3rem;                   
     color: rgb(163, 3, 163);
@@ -442,7 +442,6 @@ h1
 .event1 p, .event2 p, .event3 p, .event4 p {
     padding: 2px;
     line-height: 1.6;
-    font-weight: bold;
     color: white;
 }
 footer
@@ -588,15 +587,14 @@ margin-left: 0; /* Remove left margin */
 .close-btn {
 font-size: 24px; /* Adjust size for mobile */
 margin-right: 0; /* Align close button properly */
-position: absolute; /* Change position for better usability */
 right: 10px; /* Position close button at the top right */
-top: 10px; /* Adjust vertical position */
+margin-top: auto;
 }
 h1 
 {
     animation:zoom-in 1.7s ease ;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 750;                  
     color: rgb(163, 3, 163);
     -webkit-text-stroke: 2px rgb(255, 255, 255); 
@@ -616,7 +614,6 @@ h1
 .event1 p, .event2 p, .event3 p, .event4 p {
     padding: 2px;
     line-height: 1.6;
-    font-weight: bold;
     color: white;
 }
 footer
@@ -734,6 +731,19 @@ footer h2
         {
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'none'
+        }
+        function showForm(id) {
+            const form = document.getElementById(id);
+            // Toggle the display of the form
+            if (form.style.display === 'block') {
+                form.style.display = 'none';
+            } else {
+                // Hide all other forms
+                const forms = document.querySelectorAll('.form-container');
+                forms.forEach(f => f.style.display = 'none');
+                // Show the selected registration form
+                form.style.display = 'block';
+            }
         }
     </script>
 </head>

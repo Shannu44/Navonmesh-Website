@@ -734,7 +734,7 @@ color: white;
 }
 
 /* For tablets (min-width: 37.5vw and max-width: 56.25vw or 900px) */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
 
   .background-container {
    
@@ -766,17 +766,17 @@ color: white;
   }
 
   .skyscraper, .skyscraper2 {
-    width: 120vw;
-    height: 80vh;
+    width: 100vw;
+    height: 100vh;
 
   }
 
   .skyscraper {
-    left: 20vw;
+    left: 26vw;
   }
 
   .skyscraper2 {
-    margin-left: -100px;
+    margin-left: -80px;
   }
 
   .sidebar {
