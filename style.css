@@ -59,7 +59,7 @@ nav li:first-child{
   position: fixed;
   top: 0; 
   right: 0;
-  height: 80vh;
+  height:max-content;
   width: 150px;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
@@ -67,8 +67,8 @@ nav li:first-child{
   list-style: none;
   display: none;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: flex-end;
+  justify-content: flex-end;
   z-index: 999;
 }
 .sidebar li{
@@ -76,6 +76,7 @@ nav li:first-child{
 }
 .sidebar a{
   width: 100%;
+padding-left: 10px;
 }
 .menu-button{
   display: none;
@@ -88,9 +89,10 @@ nav li:first-child{
     display: block;
   }
 }
-@media(max-width: 400px){
+@media(max-width: 425px){
   .sidebar{
-    width: 30%;
+    width: 40%;
+    height:max-content;
   }
 }
 .background-container {
