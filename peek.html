@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  margin:0;
+  padding:0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(Pics/Moon\ with\ Scraper.png);
+}
+.logo
+{
+  height:70px;
+  width:130px;
+  margin-top:-10px;
+  padding-left:30px;
+}
+nav
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+  margin-top:25px;
+}
+nav ul
+{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li{
+  height: 50px;
+}
+nav a
+{
+  padding: 15px 25px;
+  margin-right:5px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif,"poppins";
+  font-weight: bolder;
+}
+nav a:hover
+{
+  color:rgba(237, 250, 54, 0.975);
+}
+.drop2
+{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif,"poppins";
+  float: left;
+  overflow: hidden;
+  margin-top: -10;
+}
+.drop2 .dropbtn2
+{
+  padding: 15px 25px;
+  margin-right:5px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif,"poppins";
+  font-weight: bolder;
+}
+
+.drop2-content a:hover {
+  background-color: #ffffff00;
+  color: rgb(255, 255, 255);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content 
+{
+  display: none;
+  position: absolute;
+  backdrop-filter: blur(20px);
+  width: 250px;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.drop2:hover .dropdown-content 
+{
+  display: block;
+}
+
+.dropdown:hover .dropbtn 
+{
+  background-color: #ffffff00;
+  color: rgb(255, 255, 255);
+}
+nav li:first-child{
+  margin-right: auto;
+}
+.sidebar
+{
+  position: fixed;
+  top:-18px; 
+  right: 0;
+  height:max-content;
+  width: 250px;
+  padding:10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  padding-left: 0px;
+  z-index: 999;
+}
+.sidebar li{
+  width: 100%;
+  display:flex;
+}
+.sidebar a{
+  width: 100%;
+  text-align: left;
+  font-size: 15px;  
+}
+.sidebar li a
+{
+  display:flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: flex-start ;
+}
+.menu-button
+{
+  display: none;
+}
+
+
+@media(max-width: 900px){
+  .hideOnMobile{
+    display: none;
+  }
+  .drop2
+  {
+    display: none ;
+  }
+  .menu-button
+  {
+    display: block;
+  }
+
+}
+@media(max-width: 425px)
+{
+  .sidebar{
+    width: 40%;
+    height:max-content;
+  }
+}
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding-top: 30px;
+    margin: auto;
+}
+.header-text {
+  padding:70px;
+    text-align: center;
+    color: #f4fa46;
+    z-index: 2;
+}
+
+.header-text h1 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.header-text p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+/* About Content */
+.about-content {
+    background-color: #7b7b7b7a;
+    backdrop-filter: blur(5px);
+    padding: 30px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+}
+
+.content-wrapper {
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+    padding:20px;
+}
+
+.about-content h2 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    color:white;
+}
+
+.about-content p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #ffffff;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.content-wrapper p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-text p {
+        font-size: 1.2rem;
+    }
+
+    .about-content {
+        margin-top: -50px;
+    }
+
+    .about-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+.contact-container {
+  padding-top:90px;
+  display:flex;
+  max-width: 900px;
+   margin: auto;
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.316);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+}
+
+.contact-block {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:400px;
+  height:200px;
+  background-color: #25010193;
+  border: 1px solid #ffffff4f;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 
+{
+    font-size: 24px;
+    padding-top:90px;
+    padding-left:120px;
+    color: #ffffff;
+}
+
+.contact-block p, .contact-block li {
+    font-size: 16px;
+    color: #ffffff;
+    margin-top:10px;
+}
+.contact-block h2
+{
+  color:white;
+  padding-top:0px;
+}
+
+.contact-block ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.contact-block a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.contact-block a:hover {
+    text-decoration: underline;
+}
+  
+@media (max-width: 768px) {
+    .contact-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .contact-block {
+        padding: 15px;
+    }
+}
+
+
+footer
+{
+  background-color: black;
+  height:80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer h2
+{
+  font-family: sans-serif;
+  font-size:15px;
+  color:grey;
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.soicons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    padding-right: 30px;
+   }
+  
+  .soicons .button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    transition: 0.1s;
+  }
+  .soicons .button svg {
+    color: white;
+    width: 30px;
+    height: 30px;
+    z-index: 9;
+  }
+  
+  .soicons .button:nth-child(2) {
+    background: linear-gradient(120deg, #02ff2c, #008a12);
+  }
+  
+  .soicons .button:nth-child(1) {
+    background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+  }
+  
+  .soicons .button:nth-child(3) {
+    background: rgb(255, 33, 33);
+  }
+  
+  .soicons .button:nth-child(6) {
+    background: black;
+  }
+  
+  .soicons .button:active {
+    transform: scale(0.85);
+  }
+  
+  .soicons .button::before {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background-color: #212121;
+    border-radius: 50px;
+    z-index: -1;
+    border: 0px solid rgba(255, 255, 255, 0.411);
+    transition: 0.4s;
+  }
+  .soicons .button:hover::before {
+    width: 0px;
+    height: 0px;
+  }
+  @media (max-width:500px) 
+  {
+  .logo
+  {
+    height:60px;
+    width:110px;
+    margin-top:-10px;
+    padding-left:20px;
+  }
+  footer
+{
+  bottom: 0;
+  width:100%;
+  margin-top: auto;
+  background-color: black;
+  height:60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer h2
+{
+  font-family: sans-serif;
+  font-size:6px;
+  color:grey;
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  padding-left: 10px;
+}
+.soicons{
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 5px;
+}
+
+.soicons .button 
+{
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.1s;
+}
+.soicons .button svg {
+  color: white;
+  width: 30px;
+  height: 30px;
+  z-index: 9;
+}
+.soicons .button::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #212121;
+  border-radius: 50px;
+  z-index: -1;
+  border: 0px solid rgba(255, 255, 255, 0.411);
+  transition: 0.4s;
+}
+.soicons .button:hover::before {
+  width: 0px;
+  height: 0px;
+}
+.header-text h1 
+{
+    font-size: 1.5rem;
+}
+}
+</style>
+</head>
+<body>
+  <script>
+    function showSidebar(){
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'flex';
+}
+
+function hideSidebar(){
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'none';
+}
+
+  </script>
+  <nav>
+    <ul class="sidebar">
+      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="commerce.html">Commerce Events</a></li>
+      <li><a href="cultural.html">Cultural Events</a></li>
+      <li><a href="it_page.html">IT Events</a></li>
+      <li><a href="#">Brochure</a></li>
+      <li ><a href="devs.html">Devs</a></li>
+      <li><a href="log.html">Login</a></li>
+    </ul>
+    <ul class="fullnav">
+      <li><a href="index.html"><img src="Pics/Logo_.png" class="logo"></a></li>
+      <li class="hideOnMobile"><a href="index.html">Home</a></li>
+      <div class="drop2">
+        <li class="dropbtn2">Events</li>
+          <i class="fa fa-caret-down"></i>
+        </li>
+        <div class="dropdown-content">
+          <li class="hideOnMobile"><a href="commerce.html">Commerce Events</a></li>
+          <li class="hideOnMobile"><a href="cultural.html">Cultural Events</a></li>
+          <li class="hideOnMobile"><a href="it_page.html">IT Events</a></li>
+        </div>
+      </div>
+      <li class="hideOnMobile"><a href="#">Brochure</a></li>
+      <li class="hideOnMobile"><a href="devs.html">Devs</a></li>
+      <li class="hideOnMobile"><a href="log.html">Login</a></li>
+      <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 96 960 960" width="40" fill="white"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+    </ul>
+  </nav>
+    <div class="container">
+        <div class="header-text">
+          <h1>IMJ INSTITUTE OF SCIENCE & COMMERCE</h1>
+      </div>
+        <section class="about-content">
+            <div class="content-wrapper">
+                <h2>About IMJISC</h2>
+                <p>
+                  IMJISC, affiliated to Mangalore University, is a degree college established in the year 2022 in memory of the founder IM Jayaram Shetty. The institute offers Bachelor degree programmes in Commerce and Management (B.Com & BBA) and Computer Applications (BCA).These courses are reinforced by career oriented professional guidance & training and certificate courses. The academic progress of the students and their personality development are administered in tune with aspirations of National Education Policy 2020.
+
+                  The leadership of the institution strongly believes that knowledge alone will not help the students to make their life. Therefore, we, at our institute, along with curriculum delivery, focus on empowering the students for a better future through a number of initiatives, academic as well as non-academic.
+                </p>
+            </div>
+        </section>
+          <div class="contact">
+            <h2>Contact Us</h2>
+          </div>
+    </div>
+    <div class="contact-container">
+      <!-- Block 1: Our Websites -->
+      <div class="contact-block">
+          <h2>Our Websites</h2>
+          <ul>
+              <li><a href="https://www.imjisc.com">www.imjisc.com</a></li>
+              <li><a href="https://www.imjinstitutions.com">www.imjinstitutions.com</a></li>
+          </ul>
+      </div>
+
+      <!-- Block 2: Call Us On -->
+      <div class="contact-block">
+          <h2>Call Us On</h2>
+          <p>Phone: +123 456 7890</p>
+          <p>Support: +987 654 3210</p>
+      </div>
+
+      <!-- Block 3: Email Us On -->
+      <div class="contact-block">
+          <h2>Email Us On</h2>
+          <p>General Inquiry: contact@company.com</p>
+          <p>Support: support@company.com</p>
+      </div>
+
+      <!-- Block 4: Location -->
+      <div class="contact-block">
+          <h2>Location</h2>
+          <p>123 Main Street,</p>
+          <p>City, Country, 12345</p>
+      </div>
+  </div>
+    <footer>
+        <h2>&copy; Navonmesh 2024. All rights reserved</h2>
+        <div class="soicons">
+            <button onclick="window.location.href='https:/www.instagram.com/imjkundapura/?utm_source=ig_web_button_share_sheet';" class="button">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  height="24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  class="w-6 h-6 text-gray-800 dark:text-white"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+                    fill-rule="evenodd"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </button>
+              <button onclick="window.location.href='https:/wa.me/9380773435';" class="button">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  height="24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  class="w-6 h-6 text-gray-800 dark:text-white"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z"
+                    fill-rule="evenodd"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </button>
+              <button onclick="window.location.href='https:/www.youtube.com/@IMJISC';" class="button" >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  height="24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  class="w-6 h-6 text-gray-800 dark:text-white"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+        </div>
+    </footer>
+</body>
+</html>
+</body>
+</html>
