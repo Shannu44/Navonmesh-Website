@@ -24,9 +24,10 @@ body
 }
 .logo
 {
-  height:80px;
-  width:120px;
-  margin-top:30px;
+  height:70px;
+  width:130px;
+  margin-top:-10px;
+  padding-left:30px;
 }
 nav
 {
@@ -35,6 +36,7 @@ nav
   justify-content: space-between;
   align-items: center;
   width:100%;
+  margin-top:25px;
 }
 nav ul
 {
@@ -53,7 +55,7 @@ nav a
   margin-right:5px;
   text-decoration: none;
   display: flex;
-  align-items: center;
+  justify-content: center;
   color: white;
   font-size: 20px;
   font-family: sans-serif,"poppins";
@@ -61,55 +63,130 @@ nav a
 }
 nav a:hover
 {
-  color:rgba(255, 221, 27, 0.859);
-  font-size: 22px;
-  padding-right: 4px;
+  color:rgba(237, 250, 54, 0.975);
+}
+.drop2
+{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif,"poppins";
+  float: left;
+  overflow: hidden;
+  margin-top: -10;
+}
+.drop2 .dropbtn2
+{
+  padding: 15px 25px;
+  margin-right:5px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif,"poppins";
+  font-weight: bolder;
 }
 
+.drop2-content a:hover {
+  background-color: #ffffff00;
+  color: rgb(255, 255, 255);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content 
+{
+  display: none;
+  position: absolute;
+  backdrop-filter: blur(20px);
+  width: 250px;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.drop2:hover .dropdown-content 
+{
+  display: block;
+}
+
+.dropdown:hover .dropbtn 
+{
+  background-color: #ffffff00;
+  color: rgb(255, 255, 255);
+}
 nav li:first-child{
   margin-right: auto;
 }
-.sidebar{
+.sidebar
+{
   position: fixed;
-  top: 0;
+  top:-18px; 
   right: 0;
   height:max-content;
-  width: 200px;
-  padding: 10px;
+  width: 250px;
+  padding:10px;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   list-style: none;
   display: none;
   flex-direction: column;
+  padding-left: 0px;
   z-index: 999;
-  border-radius:2px;
 }
 .sidebar li{
   width: 100%;
+  display:flex;
 }
 .sidebar a{
   width: 100%;
-  padding-left: 0px;
-  font-size: 15px;
+  text-align: left;
+  font-size: 15px;  
 }
-.menu-button{
+.sidebar li a
+{
+  display:flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: flex-start ;
+}
+.menu-button
+{
   display: none;
 }
-@media(max-width: 800px){
+
+
+@media(max-width: 900px){
   .hideOnMobile{
     display: none;
   }
-  .menu-button{
+  .drop2
+  {
+    display: none ;
+  }
+  .menu-button
+  {
     display: block;
   }
+
 }
-@media(max-width: 425px){
+@media(max-width: 425px)
+{
   .sidebar{
     width: 40%;
     height:max-content;
   }
 }
+
 .background-container {
   position: relative;
   top: 0;
@@ -173,6 +250,7 @@ nav li:first-child{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-align: center;
   align-items: center;
   height:max-content;
   border: transparent;
@@ -183,7 +261,7 @@ nav li:first-child{
 {
   color: #ffffff;
   padding:90px;
-  text-align: center;
+  text-align: left;
   font-size: 35px;
   font-weight:bolder;
   font-family: Arial, Helvetica, sans-serif;
@@ -192,9 +270,7 @@ nav li:first-child{
 {
   display:flex;
   color: #ffffff;
-  padding:20px 0px 5px;
-  text-align: center;
-  font-size: 35px;
+  font-size: 20px;
   font-weight:bolder; 
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -202,99 +278,30 @@ nav li:first-child{
 {
   color: white;
   width:90vw;
+  padding:15px;
+  border:1px solid white;
 }
 body, html 
 {
   overflow-x: hidden;
 }
-/* Add the following code to card.css */
-
-
-.page
-{
-
-  height:100%;
-  background-size:cover;
-  background-position: center;
-  justify-content: center;
-  padding: 0 25vh;
-}
-.page h1
-{
-  display: flex;
-  text-align:center;
-  justify-content: center;
-  color:#ffffff;
-  font-family:Arial, Helvetica, sans-serif;
-  padding-top: 30px;
-  font-size:60px;
-}
 .ccontainer 
 {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  /* max-width: 800px; */
-  padding: 10vh 15vh;
-  
-  /* margin-left:350px;
-  margin-top:100px; */
-}
-.ccontainer2
-{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 10vh 15vh;
-} 
-.culcontainer 
-{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-
-}
-
-.page1 .ccontainer2
-{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 10vh 25vh;
-}
-.page1
-{
-  height:100%;
-  background-size:cover;
-  background-position: center;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 0 15vh;
+  align-items: center;
+  gap: 60px;
+  padding: 0px;
 }
-.page1 h1
-{
-  display: flex;
-  text-align:center;
-  justify-content: center;
-  font-family:Arial, Helvetica, sans-serif;
-  padding:50px 0;
-  color:#ffffff;
-  font-size:60px;
-}
-
 
 
 .zard {
   overflow: visible;
   width: 390px;
   height: 390px;
+  padding:0;
+  margin:0;
 }
 
 .content {
@@ -775,8 +782,6 @@ color: white;
     perspective: -100px;
   }
 
-
-
   nav ul {
     flex-direction: row;
     justify-content: flex-end;
@@ -786,9 +791,15 @@ color: white;
     font-size: 2.2vh;
     padding: 2.5vh 2.5vw;
   }
-
+  .logo
+  {
+    height:60px;
+    width:110px;
+    margin-top:-10px;
+    padding-left:20px;
+  }
   .hero h1 {
-    font-size: 5vh;
+    font-size: 8vh;
     margin-top: 40vh;
     text-align: center;
   }
@@ -796,15 +807,16 @@ color: white;
   .skyscraper, .skyscraper2 {
     width: 100vw;
     height: 100vh;
-
   }
 
   .skyscraper {
     left: 26vw;
+    margin-top: 10vh;
   }
 
   .skyscraper2 {
     margin-left: -80px;
+    margin-top: 10vh;
   }
 
   .sidebar {

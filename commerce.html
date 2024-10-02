@@ -36,9 +36,9 @@ body, html
 }
 .logo
 {
-  height:80px;
-  width:120px;
-  margin-top:5px;
+  height:60px;
+  width:90px;
+  margin-top:-10px;
 }
 nav
 {
@@ -73,20 +73,82 @@ nav a
 }
 nav a:hover
 {
-  color:rgba(255, 221, 27, 0.859);
-  font-size: 22px;
-  padding-right: 4px;
+  color:rgba(237, 250, 54, 0.975);
 }
 
 nav li:first-child{
   margin-right: auto;
 }
-.sidebar{
+.drop2
+{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif,"poppins";
+  float: left;
+  overflow: hidden;
+  margin-top: -10;
+}
+.drop2 .dropbtn2
+{
+  padding: 15px 25px;
+  margin-right:5px;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif,"poppins";
+  font-weight: bolder;
+}
+
+.drop2-content a:hover {
+  background-color: #1a1a1a00;
+  color: rgb(255, 255, 255);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content 
+{
+  display: none;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  width: 230px;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.drop2:hover .dropdown-content 
+{
+  display: block;
+}
+/* Show the dropdown button with a background color when hovered */
+.dropdown:hover .dropbtn 
+{
+  background-color: #ffffff00;
+  color: rgb(255, 255, 255);
+}
+nav li:first-child{
+  margin-right: auto;
+}
+.sidebar
+{
   position: fixed;
-  top:-18px;
+  top:-18px; 
   right: 0;
   height:max-content;
-  width: 200px;
+  width: 250px;
   padding:10px;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
@@ -94,32 +156,48 @@ nav li:first-child{
   list-style: none;
   display: none;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  padding-left: 0px;
   z-index: 999;
 }
 .sidebar li{
   width: 100%;
+  display:flex;
 }
 .sidebar a{
   width: 100%;
-  padding-left: 0px;
-  font-size: 15px;
+  text-align: left;
+  font-size: 15px;  
 }
-.menu-button{
+.sidebar li a
+{
+  display:flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: flex-start ;
+}
+.menu-button
+{
   display: none;
 }
-@media(max-width: 800px){
+
+@media(max-width: 900px){
   .hideOnMobile{
     display: none;
   }
-  .menu-button{
+  .drop2
+  {
+    display: none ;
+  }
+  .menu-button
+  {
     display: block;
   }
+
 }
-@media(max-width: 425px){
+@media(max-width: 425px)
+{
   .sidebar{
-    width: 40%;
+    width: 50%;
     height:max-content;
   }
 }
@@ -135,19 +213,18 @@ h1
 {
     animation:zoom-in 1.7s ease ;
     text-align: center;
-    font-size: 50px;
-    font-weight: 750;
-    font-size: 3rem;                   
+    font-size: 40px;
+    font-weight: 750;                   
     color: rgb(163, 3, 163);
-    -webkit-text-stroke: 2px rgb(255, 255, 255); 
+    -webkit-text-stroke: 1px rgb(255, 255, 255); 
 }
 @keyframes zoom-in 
 {
   0% {
-    transform: scale(1.3, 1.3);
+    transform: scale(1.1, 1.1);
   }
   50% {
-    transform: scale(1.1, 1.1);
+    transform: scale(1, 1);
   }
   100% {
     transform: scale(1, 1);
@@ -370,8 +447,7 @@ padding-top: 40px; /* Adjust top margin for the heading */
 {
   height:60px;
   width:90px;
-  top:0;
-  margin-left:-35px;
+  margin-top:-10px;
 }
 .event1, .event2, .event3, .event4 {
 width: 100%;
@@ -423,19 +499,18 @@ h1
 {
     animation:zoom-in 1.7s ease ;
     text-align: center;
-    font-size: 40px;
-    font-weight: 750;
-    font-size: 3rem;                   
+    font-size: 25px;
+    font-weight: 750;                 
     color: rgb(163, 3, 163);
-    -webkit-text-stroke: 2px rgb(255, 255, 255); 
+    -webkit-text-stroke: 1px rgb(255, 255, 255); 
 }
 @keyframes zoom-in 
 {
   0% {
-    transform: scale(1.3, 1.3);
+    transform: scale(1.1, 1.1);
   }
   50% {
-    transform: scale(1.1, 1.1);
+    transform: scale(1, 1);
   }
   100% {
     transform: scale(1, 1);
@@ -733,27 +808,38 @@ footer h2
     </script>
 </head>
 <body>
-    <nav>
-        <ul class="sidebar">
-          <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="commerce.html">Commerce Events</a></li>
-          <li><a href="cultural.html">Cultural Events</a></li>
-          <li><a href="it_page.html">IT Events</a></li>
-          <li><a href="#">Login</a></li>
-        </ul>
-        <ul>
-          <li><img src="Pics/Logo_.png" class="logo"></li>
-          <li class="hideOnMobile"><a href="index.html">Home</a></li>
+  <nav>
+    <ul class="sidebar">
+      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="commerce.html">Commerce Events</a></li>
+      <li><a href="cultural.html">Cultural Events</a></li>
+      <li><a href="it_page.html">IT Events</a></li>
+      <li><a href="#">Brochure</a></li>
+      <li ><a href="devs.html">Devs</a></li>
+      <li><a href="#">Login</a></li>
+    </ul>
+    <ul class="fullnav">
+      <li><a href="index.html"><img src="Pics/Logo_.png" class="logo"></a></li>
+      <li class="hideOnMobile"><a href="index.html">Home</a></li>
+      <div class="drop2">
+        <li class="dropbtn2">Events</li>
+          <i class="fa fa-caret-down"></i>
+        </li>
+        <div class="dropdown-content">
           <li class="hideOnMobile"><a href="commerce.html">Commerce Events</a></li>
           <li class="hideOnMobile"><a href="cultural.html">Cultural Events</a></li>
           <li class="hideOnMobile"><a href="it_page.html">IT Events</a></li>
-          <li class="hideOnMobile"><a href="#">Login</a></li>
-          <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 96 960 960" width="40" fill="white"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
-        </ul>
-      </nav>
+        </div>
+      </div>
+      <li class="hideOnMobile"><a href="#">Brochure</a></li>
+      <li class="hideOnMobile"><a href="devs.html">Devs</a></li>
+      <li class="hideOnMobile"><a href="#">Login</a></li>
+      <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 96 960 960" width="40" fill="white"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+    </ul>
+  </nav>
     <div class="eventname">
-        <h1>Commerce Fest Competitions</h1>
+        <h1>Commerce Events-Competitions</h1>
     </div>
     <div class="container">
     <!-- Jnana Kaushala (Commerce Quiz) -->

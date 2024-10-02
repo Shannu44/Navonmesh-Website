@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dev.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*
+{
+  font-family: "Poppins",sans-serif;
+}
+body 
+{
+  margin:0;
+  padding:0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Pics/Robot\ ai.png);
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  height:50%;
+  min-height: 50%;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow:hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  bottom:0;
+}
+.cards-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 80px;
+}
+
+.card {
+  overflow: visible;
+  width: 390px;
+  height: 390px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
+}
+
+.front, .back {
+  background-color: #151515;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.back::before {
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, #ffffff, #ffffff, #ffffff, #ffffff, transparent);
+  animation: rotation_481 5000ms infinite linear;
+}
+
+.back-content {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: #020116;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.back-content h2{
+  font: 20px;
+  margin-bottom: 14px;
+}
+
+.back-content img{
+  height: 300px;
+  border-radius: 10px;
+
+}
+
+.zard:hover .content {
+  transform: rotateY(180deg);
+}
+
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  0% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.front {
+  transform: rotateY(180deg);
+  color: white;
+  text-align: center;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.front h1
+{
+  font-size: 14px;
+  z-index: 2;
+  padding:0px;
+  padding-top:5px;
+}
+.front p {
+  padding: 10px 10px;
+  padding-bottom: 5px;
+  border: 1px solid white;
+}
+.front h2
+{
+  color:aqua;
+  padding:20px;
+}
+.front h3
+{
+  font-size:16px;
+  color:rgb(251, 255, 129);
+  padding:2px;
+}
+.front-content .badge {
+  background-color: #00000055;
+  padding: 2px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  width: fit-content;
+}
+
+
+
+.title {
+  font-size: 11px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title p {
+  width: 50%;
+}
+
+.card-footer {
+  color: #ffffff88;
+  margin-top: 5px;
+  font-size: 8px;
+}
+
+.front .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color:#fdfd1abf;
+  z-index: -1;
+  position: relative;
+  filter: blur(15px);
+  animation: floating 2600ms infinite linear;
+}
+
+#bottom {
+  background-color: #ff20d6a5;
+  left: 50px;
+  z-index: -1;
+  width: 150px;
+  height: 150px;
+  animation-delay: -800ms;
+}
+
+#right {
+  background-color: #ff00aa; 
+  left: 160px;
+  top: -80px;
+  z-index: -1;
+  width: 30px;
+  height: 30px;
+  animation-delay: -1800ms;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+    </style>
+</head>
+<body>
+    <section class="developers-section">
+        <h1>Meet the Developers</h1>
+        <div class="cards-container">
+          
+        
+            <div class="zard">
+                <div class="content">
+                  <div class="back">
+                    <div class="back-content">
+                      <img src="Pics/Pictoris.png" alt="">
+              
+                      <h2>Quiz</h2>
+                    </div>
+                  </div>
+                  <div class="front">
+                    
+                    <div class="img">
+                      <div class="circle">
+                      </div>
+                      <div class="circle" id="right">
+                      </div>
+                      <div class="circle" id="bottom">
+                      </div>
+                    </div>
+                    <h2>JNANA VAIBHAVA</h2>
+                   <p>Test your business acumen and knowledge of the corporate world with our exciting Commerce Quiz Challenge! This high-energy quiz competition will cover a wide range of topics including economics, finance, accounting, marketing, entrepreneurship, and current affairs in the world of business. </p>
+                   <h3>Student Coordinator:</h3>
+                   <div class="num">
+                    <h1>Sabha-8296016794</h1>
+                    <h1>Nagaraj-8971930821</h1>
+                   </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="zard">
+                  <div class="content">
+                    <div class="back">
+                      <div class="back-content">
+                        <img src="Pics/Pictoris.png" alt="">
+                
+                        <h2>Brand Rangoli</h2>
+                      </div>
+                    </div>
+                    <div class="front">
+                      
+                      <div class="img">
+                        <div class="circle">
+                        </div>
+                        <div class="circle" id="right">
+                        </div>
+                        <div class="circle" id="bottom">
+                        </div>
+                      </div>
+                      <h2>KALA KAUSHALA</h2>
+                     <p>Unleash your creativity and marketing skills in our unique Brand Rangoli Competition! This event blends the traditional art of Rangoli with the modern world of branding.</p>
+                     <h3>Student Coordinator:</h3>
+                     <div class="num">
+                      <h1>S Aysha Safa-9108332739</h1>
+                      <h1>Rakshitha-9743280437</h1>
+                     </div>
+                      </div>
+                    </div>
+                  </div>
+
+          
+                  <div class="zard">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="Pics/Pictoris.png" alt="">
+                  
+                          <h2>Quiz</h2>
+                        </div>
+                      </div>
+                      <div class="front">
+                        
+                        <div class="img">
+                          <div class="circle">
+                          </div>
+                          <div class="circle" id="right">
+                          </div>
+                          <div class="circle" id="bottom">
+                          </div>
+                        </div>
+                        <h2>JNANA VAIBHAVA</h2>
+                       <p>Test your business acumen and knowledge of the corporate world with our exciting Commerce Quiz Challenge! This high-energy quiz competition will cover a wide range of topics including economics, finance, accounting, marketing, entrepreneurship, and current affairs in the world of business. </p>
+                       <h3>Student Coordinator:</h3>
+                       <div class="num">
+                        <h1>Sabha-8296016794</h1>
+                        <h1>Nagaraj-8971930821</h1>
+                       </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="zard">
+                      <div class="content">
+                        <div class="back">
+                          <div class="back-content">
+                            <img src="Pics/Pictoris.png" alt="">
+                    
+                            <h2>Brand Rangoli</h2>
+                          </div>
+                        </div>
+                        <div class="front">
+                          
+                          <div class="img">
+                            <div class="circle">
+                            </div>
+                            <div class="circle" id="right">
+                            </div>
+                            <div class="circle" id="bottom">
+                            </div>
+                          </div>
+                          <h2>KALA KAUSHALA</h2>
+                         <p>Unleash your creativity and marketing skills in our unique Brand Rangoli Competition! This event blends the traditional art of Rangoli with the modern world of branding.</p>
+                         <h3>Student Coordinator:</h3>
+                         <div class="num">
+                          <h1>S Aysha Safa-9108332739</h1>
+                          <h1>Rakshitha-9743280437</h1>
+                         </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="zard">
+                        <div class="content">
+                          <div class="back">
+                            <div class="back-content">
+                              <img src="Pics/Pictoris.png" alt="">
+                      
+                              <h2>Quiz</h2>
+                            </div>
+                          </div>
+                          <div class="front">
+                            
+                            <div class="img">
+                              <div class="circle">
+                              </div>
+                              <div class="circle" id="right">
+                              </div>
+                              <div class="circle" id="bottom">
+                              </div>
+                            </div>
+                            <h2>JNANA VAIBHAVA</h2>
+                           <p>Test your business acumen and knowledge of the corporate world with our exciting Commerce Quiz Challenge! This high-energy quiz competition will cover a wide range of topics including economics, finance, accounting, marketing, entrepreneurship, and current affairs in the world of business. </p>
+                           <h3>Student Coordinator:</h3>
+                           <div class="num">
+                            <h1>Sabha-8296016794</h1>
+                            <h1>Nagaraj-8971930821</h1>
+                           </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="zard">
+                          <div class="content">
+                            <div class="back">
+                              <div class="back-content">
+                                <img src="Pics/Pictoris.png" alt="">
+                        
+                                <h2>Brand Rangoli</h2>
+                              </div>
+                            </div>
+                            <div class="front">
+                              
+                              <div class="img">
+                                <div class="circle">
+                                </div>
+                                <div class="circle" id="right">
+                                </div>
+                                <div class="circle" id="bottom">
+                                </div>
+                              </div>
+                              <h2>KALA KAUSHALA</h2>
+                             <p>Unleash your creativity and marketing skills in our unique Brand Rangoli Competition! This event blends the traditional art of Rangoli with the modern world of branding.</p>
+                             <h3>Student Coordinator:</h3>
+                             <div class="num">
+                              <h1>S Aysha Safa-9108332739</h1>
+                              <h1>Rakshitha-9743280437</h1>
+                             </div>
+                              </div>
+                            </div>
+                          </div>
+    </section>
+
+    <script>
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
