@@ -26,6 +26,7 @@ body {
   background-size: cover;
   overflow: auto;
   background-color: #000000;
+  overflow-x:hidden;
 }
 .logo
 {
@@ -224,6 +225,7 @@ nav li:first-child{
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     position: relative;
+    border:2px solid rgb(63, 63, 63);
 }
 
 .content-wrapper {
@@ -254,29 +256,89 @@ nav li:first-child{
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .header-text h1 {
-        font-size: 2.5rem;
-    }
+@media (max-width: 768px)
+ {
+.header-text h1 
+{
+    font-size: 1.2rem;
+}
+.header-text h2 
+{
+    font-size: 0.9rem;
+}
+.header-text p {
+    font-size: 1.2rem;
+}
 
-    .header-text p {
-        font-size: 1.2rem;
-    }
+.about-content {
+    margin-top: -50px;
+}
 
-    .about-content {
-        margin-top: -50px;
-    }
+.about-content h2 
+{
+    font-size: 1.8rem;
+}
+.logo
+  {
+    height:60px;
+    width:110px;
+    margin-top:-10px;
+    padding-left:20px;
+  }
+  footer
+{
+  bottom: 0;
+  width:100%;
+  margin-top: auto;
+  background-color: black;
+  height:60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer h2
+{
+  font-family: sans-serif;
+  font-size:6px;
+  color:grey;
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  padding-left: 10px;
+}
+.soicons{
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 5px;
+}
+.about-content p {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #ffffff;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
 
-    .about-content h2 {
-        font-size: 1.8rem;
-    }
+.about-content h2 
+{
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: left;
+    color:white;
+}
+.msg .msg-wrapper  p {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #ffffff;
+}   
 }
 
 .contact-container {
   padding-top:90px;
   display:flex;
   max-width: 900px;
-   margin: auto;
+  margin: auto;
   text-align: center;
   flex-direction: row;
   justify-content: space-between;
@@ -337,15 +399,22 @@ nav li:first-child{
 .contact-block a:hover {
     text-decoration: underline;
 }
-  
-@media (max-width: 768px) {
+
+
+
+@media (max-width: 768px) 
+{
     .contact-container {
-        width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-items: center;
         padding: 10px;
     }
 
     .contact-block {
         padding: 15px;
+        width: 100%;
     }
 }
 
@@ -433,6 +502,41 @@ footer h2
     width: 0px;
     height: 0px;
   }
+  .msg 
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:max-content;
+    max-width: 1000px;
+    padding-top: 30px;
+    margin-top:120px;
+    backdrop-filter: blur(10px);
+    background-color: #9d9d9d59;
+    border-radius: 5px;
+    border:2px solid rgb(63, 63, 63);
+}
+.msg-wrapper p
+{
+  color:white;
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin:0;
+}
+.msg-wrapper h2
+{
+  color:rgb(249, 254, 207);
+  padding:20px 0 20px;
+  margin: 0px;
+}
+.msg-wrapper {
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+    padding:20px;
+}
+
   @media (max-width:500px) 
   {
   .logo
@@ -469,6 +573,13 @@ footer h2
   padding-right: 5px;
 }
 .about-content p {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #ffffff;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+.msg-wrapper p {
     font-weight: 300;
     font-size: 0.8rem;
     color: #ffffff;
@@ -517,10 +628,6 @@ footer h2
 .soicons .button:hover::before {
   width: 0px;
   height: 0px;
-}
-.header-text h1 
-{
-    font-size: 1.5rem;
 }
 .contact h2 
 {
@@ -580,6 +687,7 @@ function hideSidebar(){
     <div class="container">
         <div class="header-text">
           <h1>IMJ INSTITUTE OF SCIENCE & COMMERCE</h1>
+          <h2>Moodlakatte, Kundapura</h2>
       </div>
         <section class="about-content">
             <div class="content-wrapper">
@@ -591,6 +699,15 @@ function hideSidebar(){
                 </p>
             </div>
         </section>
+        <section class="msg">
+          <div class="msg-wrapper">
+            <img src="Pics/Principal imj.jpg" width="200" height="220"  alt="">
+            <h2>Principal's Message  about Navonmesh 2024</h2>
+          <p>We are delighted to announce the commencement of Navonmesh 2024, a state level fest organized to provide a vibrant platform for PUC students to explore and showcase their talents across Information Technology, Commerce, Management, and Cultural performances. This event is designed to foster creativity, innovation, and holistic development among participating students, offering them an opportunity to step beyond textbooks and express their strengths in diverse fields.
+            We look forward to making this event a memorable and enriching experience for all participants.</p>
+          </div>  
+        </section>
+      </div>
           <div class="contact">
             <h2>Contact Us</h2>
           </div>
