@@ -7,20 +7,83 @@
   box-sizing: border-box;
   font-family:"Poppins",sans-serif;
 }
+.load-wrapper
+{
+  background-color: black;
+  background-size: cover;
+  width:100vw;
+  height:100vh;
+  top:0;
+  left:0;
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.loader
+{
+  display:inline-block;
+  width:200px;
+  height:20px;
+  position: relative;
+  border:2px solid white;
+  top:30%;
+}
+.load-inner
+{
+  vertical-align: top;
+  display: inline-block;
+  height:100%;
+  background-color: white;
+  animation: load-inner 5s  ease-in;
+}
+.load-wrapper img
+{
+  position:absolute;
+  top:30%;
+  width:200px;
+  height:160px;
+}
+
+
+@keyframes load-inner
+{
+  0%
+  {
+    width:0%;
+  }
+  25%
+  {
+    width:0%;
+  }
+  50%
+  {
+    width:50%;
+  }
+  75%
+  {
+    width:75%;
+  }
+  100%
+  {
+    width:100%;
+  }
+}
 body
 {
   height:100%;
   padding: 0;
   margin: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Pics/Male\ Futuristic\ Ai\ Robo.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(Pics/Male\ Futuristic\ Ai\ Robo.png);
   background-repeat: no-repeat;
   background-position: center;
   height:100%;
   min-height: 100vh;
   background-attachment: fixed;
   background-size: cover;
-  overflow: auto;
   background-color: #000000;
+  overflow: auto;
 }
 .logo
 {
@@ -197,6 +260,7 @@ nav li:first-child{
   background-image: url('Pics/OIG4.jpeg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   overflow: hidden;
 }
 
@@ -209,7 +273,7 @@ nav li:first-child{
   font-size: 15vh;
   letter-spacing: 0.5vw;
   font-family: sans-serif;
-  animation: fadeIn 3s ease-in-out;
+  animation: fadeIn 8s ease-in-out;
   color: white;
 }
 
@@ -246,6 +310,59 @@ nav li:first-child{
 }
 
 
+#title
+{
+  color:rgb(0, 0, 0);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  font-size: 70px;
+  text-align: center;
+  margin-top:50px;
+  margin-bottom: 25px;
+  padding-top:50px;
+  padding-bottom:50px;
+}
+#title1
+{
+  color:rgb(255, 255, 255);
+  -webkit-text-stroke: 2px rgb(18, 18, 18);
+  font-size: 70px;
+  text-align: center;
+  margin-top:50px;
+  margin-bottom: 25px;
+  padding-top:50px;
+  padding-bottom:50px;
+}
+.tit
+{
+  height:auto;
+  margin-bottom: 3%;
+  background-color: rgb(0, 0, 0);
+}
+.itit
+{
+  width:100vw;
+  height:30vh;
+  margin-bottom: 3%;
+  background:url(Pics/It\ title.gif)no-repeat center center;
+  background-size: cover;
+}
+.ctit
+{
+  width:100vw;
+  height:30vh;
+  margin-bottom: 3%;
+  background:url(Pics/cultural\ title.gif)no-repeat center center;
+  background-size: cover;
+}
+.tit
+{
+  width:100vw;
+  height:30vh;
+  margin-bottom: 3%;
+  background:url(Pics/commerce\ title.gif)no-repeat center center;
+  background-size: cover;
+}
+
 .clginf 
 {
   display: flex;
@@ -257,6 +374,7 @@ nav li:first-child{
   border: transparent;
   backdrop-filter:blur(10px);
   background: rgba(255, 255, 255, 0.164);
+  margin-bottom: 30px;
 }
 .clginf h2
 {
@@ -283,6 +401,28 @@ nav li:first-child{
   padding:15px;
   border:1px solid white;
   margin-bottom: 20px;
+}
+.rules
+{
+  backdrop-filter: blur(5px);
+  background-color:rgba(1, 2, 31, 0.542);
+  border-radius: 5px;
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 30px;
+  padding:10px;
+  margin: auto;
+}
+.rules h2
+{
+  padding:10px 20px;
+  color:rgb(241, 239, 108);
+}
+.rules p
+{
+  padding: 10px;
+  color:rgb(246, 254, 190);
+  border: 1px solid  rgb(255, 255, 255);
 }
 body, html 
 {
@@ -424,7 +564,6 @@ body, html
   backdrop-filter: blur(2px);
   width: fit-content;
 }
-
 
 
 .title {
@@ -580,7 +719,7 @@ border-right: 0.125rem solid gold;
 transform: rotate(45deg);
 }
 
-.joinus button.learn-more .button-text {
+.joinus button.learn-more .button-text a{
 font-size: 18px;
 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -596,6 +735,7 @@ font-weight: 700;
 line-height: 1.6;
 text-align: center;
 text-transform: uppercase;
+text-decoration: none;
 }
 
 .joinus button:hover .jcircle {
@@ -607,7 +747,7 @@ background:gold;
 transform: translate(1rem, 0);
 }
 
-.joinus button:hover .button-text {
+.joinus button:hover .button-text  a{
 color: white;
 }
  .soicons{
