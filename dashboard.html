@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Participants List</title>
+    <style>
+        /* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url(Pics/bg.jpg)no-repeat;
+    background-size: cover;
+    width:auto;
+    height:max-content;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+a
+{
+    color:rgb(255, 50, 50);
+    display: flex;
+    justify-content: right;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover
+{
+    color: red;
+}
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    backdrop-filter: blur(5px);
+    background: rgba(51, 51, 51, 0.184);
+    padding: 25px;
+    border-radius: 10px;
+    border:1px solid black;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.184);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+header, footer {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+}
+
+header h1 a {
+    font-size: 0.5em;
+    color: #3a7be5;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+header h1 a:hover {
+    text-decoration: underline;
+    color:#0453d1;
+}
+
+.event-section {
+    margin-bottom: 40px;
+    border: 2px solid #dbdbdb;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: transparent;
+}
+
+.event-section h2 {
+    font-size: 1.8em;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 5px;
+}
+
+.participant-list {
+    margin-top: 15px;
+}
+
+.participant-item {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: transparent;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.participant-item:nth-child(odd) {
+    background-color:transparent;
+    border: 1px solid white;
+    color:white;
+}
+
+.participant-item:before {
+    content: "👤";
+    margin-right: 10px;
+}
+
+
+/* Responsive styling for mobile devices */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .event-section h2 {
+        font-size: 1.5em;
+    }
+
+    .participant-item {
+        font-size: 1em;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>{% if logged_in %}
+        <h1>Hello, {{ session['user_name'] }}! <a href="{{ url_for('logout') }}">Logout</a>
+        </h1>
+    {% endif %}
+            <h1>Participants List</h1>
+        </header>
+
+        {% for event, participants in event_participants.items() %}
+            <div class="event-section">
+                <h2>{{ event }}</h2>
+                <div class="participant-list">
+                    {% for participant in participants %}
+                        {% if participant %}  <!-- Check if participant is not empty -->
+                            <div class="participant-item">{{ loop.index }}. {{ participant }}</div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <a href="index.html">Exit</a>
+        {% endfor %}        
+    </div>
+</body>
+</html>
