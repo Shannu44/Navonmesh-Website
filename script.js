@@ -47,7 +47,7 @@ window.addEventListener("load", function() {
   setTimeout(function() {
     loader.style.display = "none";       // Hide the loader
     window.scrollTo(0, 0);               // Scroll the page to the top after loading
-  }, 5000); // 5-second delay
+  }, 4000); // 5-second delay
 });
 
 

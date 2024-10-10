@@ -238,7 +238,7 @@ h1
     align-items: left;
     flex-direction: column;
     border: 1px solid #f3eeee;
-    background: rgba(6, 0, 0, 0.37);
+    background: rgba(0, 0, 0, 0.37);
     border-radius: 10px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
     width:500px;
@@ -252,7 +252,7 @@ h1
 .event1 h2, .event2 h2, .event3 h2, .event4 h2, .event5 h2 {
     text-align: center;
     margin-top: 10px;
-    color: rgb(239, 231, 4);
+    color: rgb(255, 245, 105);
 }
 .event1 p, .event2 p, .event3 p, .event4 p, .event5 p 
 {
@@ -601,7 +601,7 @@ footer h2
 {
   font-size: 15px;
   color:white;
-  font-weight: 200;
+  font-weight: 400;
   text-align: center;
 }
 }
@@ -687,7 +687,7 @@ h1
     font-size: 25px;
     font-weight: 750;                  
     color: rgb(255, 0, 166);
-    -webkit-text-stroke: 2px rgb(255, 255, 255); 
+    -webkit-text-stroke: 1px rgb(255, 255, 255); 
 }
 @keyframes zoom-in 
 {
@@ -821,6 +821,11 @@ footer h2
         {
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'none'
+        }
+        function showMessageBox() 
+        {
+            alert("Submitted Successfully!");
+            return true; 
         }
         function showForm(id) {
             const form = document.getElementById(id);
@@ -1013,7 +1018,7 @@ footer h2
 <footer>
 <h2>&copy; Navonmesh 2024. All rights reserved</h2>
 <div class="soicons">
-<button onclick="window.location.href='https:/www.instagram.com/imjkundapura/?utm_source=ig_web_button_share_sheet';" class="button">
+<button onclick="window.location.href='https://www.instagram.com/imjkundapura/?utm_source=ig_web_button_share_sheet';" class="button">
     <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -1031,7 +1036,7 @@ footer h2
     ></path>
     </svg>
 </button>
-<button onclick="window.location.href='https:/wa.me/9380773435';" class="button">
+<button onclick="window.location.href='https://wa.me/9380773435';" class="button">
     <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -1053,7 +1058,7 @@ footer h2
     ></path>
     </svg>
 </button>
-<button onclick="window.location.href='https:/www.youtube.com/@IMJISC';" class="button" >
+<button onclick="window.location.href='https://www.youtube.com/@IMJISC';" class="button" >
     <svg
     viewBox="0 0 24 24"
     fill="currentColor"

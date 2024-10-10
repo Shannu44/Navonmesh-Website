@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Play:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * 
 {
@@ -27,6 +27,7 @@
   width:200px;
   height:20px;
   position: relative;
+  border-radius: 10px;
   border:2px solid white;
   top:30%;
 }
@@ -35,14 +36,15 @@
   vertical-align: top;
   display: inline-block;
   height:100%;
-  background-color: white;
-  animation: load-inner 5s  ease-in;
+  border-radius: 10px;
+  background-color: rgb(46, 116, 255);
+  animation: load-inner 4s  ease-in;
 }
 .load-wrapper img
 {
   position:absolute;
-  top:30%;
-  width:200px;
+  top:40%;
+  width:220px;
   height:160px;
 }
 
@@ -272,7 +274,7 @@ nav li:first-child{
   z-index: 2;
   font-size: 15vh;
   letter-spacing: 0.5vw;
-  font-family: sans-serif;
+  font-family: "Play",sans-serif;
   animation: fadeIn 8s ease-in-out;
   color: white;
 }
@@ -331,7 +333,7 @@ nav li:first-child{
   width:100vw;
   height:30vh;
   margin-bottom: 3%;
-  background:url(Pics/It\ title.gif)no-repeat center center;
+  background:url(Pics/It-title.gif)no-repeat center ;
   background-size: cover;
 }
 .ctit
@@ -339,7 +341,7 @@ nav li:first-child{
   width:100vw;
   height:30vh;
   margin-bottom: 3%;
-  background:url(Pics/cultural\ title.gif)no-repeat center center;
+  background:url(Pics/cultural\ title.gif)no-repeat center ;
   background-size: cover;
 }
 .tit
@@ -347,7 +349,7 @@ nav li:first-child{
   width:100vw;
   height:30vh;
   margin-bottom: 3%;
-  background:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),url(Pics/title.gif)no-repeat center center;
+  background:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),url(Pics/title.gif)no-repeat center ;
   background-size: cover;
 }
 
