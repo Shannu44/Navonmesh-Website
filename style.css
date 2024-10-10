@@ -579,20 +579,9 @@ body, html
 
 .back-content h2{
   font-size: 25px;
-  color:white;
+  color:rgb(254, 255, 224);
   margin-top: 15px;
 }
-.back1-content h2{
-  font-size: 25px;
-  color:white;
-  margin-top: 15px;
-}
-.back2-content h2{
-  font-size: 25px;
-  color:white;
-  margin-top: 15px;
-}
-
 
 
 .back-content img{
@@ -754,7 +743,7 @@ footer h2
 {
 display: flex;
 justify-content: center;
-margin: 30px 0;
+margin: 80px 0;
 }
 .joinus button {
 position: relative;
@@ -912,7 +901,65 @@ color: white;
   width: 0px;
   height: 0px;
 }
+.combtn
+{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  width:180px;
+  height:40px;
+  color:white;
+  font-size: 18px;
+  text-decoration: none;
+  background-color: rgba(6, 67, 4, 0.956);
+  border-radius: 5px;
+  border:1px solid white;
+}
+.combtn:hover
+{
+  background-color:green;
+}
 
+.culbtn
+{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  width:180px;
+  height:40px;
+  color:white;
+  font-size: 18px;
+  text-decoration: none;
+  background-color: rgba(6, 67, 4, 0.956);
+  border-radius: 5px;
+  border:1px solid white;
+}
+.culbtn:hover
+{
+  background-color:green;
+}
+
+.itbtn
+{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  width:180px;
+  height:40px;
+  color:white;
+  font-size: 18px;
+  text-decoration: none;
+  background-color: rgba(6, 67, 4, 0.956);
+  border-radius: 5px;
+  border:1px solid white;
+}
+.itbtn:hover
+{
+  background-color:green;
+}
 
 
 
